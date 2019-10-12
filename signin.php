@@ -1,3 +1,9 @@
+<?php
+	if (isset($_POST['dbmsg'])) {
+		$f = $_POST['dbmsg'];
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,7 +173,7 @@
 				loader.classList.remove('fadeOut');
 				var dbflag = checkDashboardFlag();
 				if (dbflag) {
-
+					loader.classList.add('fadeOut');
 				} else {
 					checkSigninCookie();
 					getSignout();
